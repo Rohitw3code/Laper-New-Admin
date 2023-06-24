@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#121C22</color>
-    <color name="purple_500">#121C22</color>
-    <color name="purple_700">#121C22</color>
-    <color name="teal_200">#121C22</color>
-    <color name="teal_700">#121C22</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Background">#121C22</color>
-    <color name="Buttons">#008DF2</color>
+    <color name="Buttons">#6C63FF</color>
     <color name="Logo_color">#6C63FF</color>
     <color name="input_area_grey">#32D9D9D9</color>
     <color name="button_blue">#008DF2</color>

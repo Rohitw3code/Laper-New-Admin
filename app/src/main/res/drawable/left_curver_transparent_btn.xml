@@ -2,6 +2,7 @@
 
     <stroke android:width="2dp" android:color="@color/Buttons" />
     <solid android:color="@android:color/transparent" />
-    <corners android:radius="10dp" />
+    <corners android:bottomLeftRadius="20dp"
+        android:topLeftRadius="20dp"/>
 
 </shape>

@@ -13,7 +13,6 @@ public class HomePage extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    Toolbar toolbar;
     public ActionBarDrawerToggle actionBarDrawerToggle;
 
     @Override
