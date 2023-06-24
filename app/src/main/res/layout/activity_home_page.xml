@@ -1,58 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start"
-    android:background="@color/Background"
-    tools:context=".HomePage">
+    android:orientation="vertical">
 
-
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@color/Background"
-        app:itemTextColor="@color/white"
-        android:id="@+id/naviagtionView"
-        app:headerLayout="@layout/activity_header"
-        app:menu="@menu/side_menu"
-        android:layout_gravity="start"/>
-
-    <LinearLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="@color/Background"
-        android:orientation="vertical">
+        android:fitsSystemWindows="true"
+        tools:context=".HomePage"
+        tools:openDrawer="start">
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/naviagtionView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/Background"
+            app:headerLayout="@layout/activity_header"
+            app:itemTextColor="@color/white"
+            app:menu="@menu/side_menu" />
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:background="@drawable/left_curve_button"
-                android:paddingHorizontal="10dp"
-                android:text="Open Requests"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:background="@drawable/right_curverd_transparent_btn"
-                android:paddingHorizontal="10dp"
-                android:textColor="@color/Buttons"
-                android:text="My Requests"/>
+            android:layout_height="match_parent"
+            android:background="@color/Background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/left_curve_button"
+                    android:paddingHorizontal="10dp"
+                    android:text="Open Requests" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/right_curverd_transparent_btn"
+                    android:paddingHorizontal="10dp"
+                    android:text="My Requests"
+                    android:textColor="@color/Buttons" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scroll view"
+                    android:textColor="@color/white" />
+            </ScrollView>
+
         </LinearLayout>
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Scroll view"
-                android:textColor="@color/white"/>
-        </ScrollView>
-    </LinearLayout>
-</androidx.drawerlayout.widget.DrawerLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Background"
+        app:menu="@menu/bottom_nav_menu" />
+
+</LinearLayout>
